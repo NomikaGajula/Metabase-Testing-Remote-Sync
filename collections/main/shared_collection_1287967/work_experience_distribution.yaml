@@ -1,0 +1,47 @@
+name: Work Experience Distribution
+entity_id: LxcmDpZ1aGaNVgiGPqBWw
+created_at: '2026-06-29T17:55:17.149429Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: bar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT CASE WHEN work_exp_year = 0 THEN '0 yrs' WHEN work_exp_year BETWEEN 1 AND 2 THEN '1-2 yrs' WHEN work_exp_year BETWEEN 3 AND 5 THEN '3-5 yrs' WHEN work_exp_year BETWEEN 6 AND 10 THEN '6-10 yrs' WHEN work_exp_year BETWEEN 11 AND 15 THEN '11-15 yrs' ELSE '15+ yrs' END AS experience_band, COUNT(*) AS count FROM candidates_1287967 GROUP BY experience_band ORDER BY MIN(work_exp_year)
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: experience_band
+  effective_type: type/Text
+  field_ref:
+  - field
+  - experience_band
+  - base-type: type/Text
+  name: experience_band
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: count
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - count
+  - base-type: type/BigInteger
+  name: count
+  semantic_type: type/Quantity
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - experience_band
+  graph.metrics:
+  - count
+card_schema: 23
+serdes/meta:
+- id: LxcmDpZ1aGaNVgiGPqBWw
+  label: work_experience_distribution
+  model: Card
+type: question

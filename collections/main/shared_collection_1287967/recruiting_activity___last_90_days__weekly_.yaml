@@ -1,0 +1,73 @@
+name: Recruiting Activity — Last 90 Days (Weekly)
+entity_id: y1gwWclAAeEJQ55f5nAFG
+created_at: '2026-06-30T09:40:30.307706Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: line
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT week, metric, count FROM (SELECT DATE_FORMAT(created_on, '%Y-W%v') AS week, 'Jobs Created' AS metric, COUNT(*) AS count FROM jobs_1287967 WHERE created_on >= {{start_date}} AND created_on <= {{end_date}} GROUP BY week UNION ALL SELECT DATE_FORMAT(FROM_UNIXTIME(createdon), '%Y-W%v') AS week, 'Candidates Submitted' AS metric, COUNT(*) AS count FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid = 1 AND FROM_UNIXTIME(createdon) >= {{start_date}} AND FROM_UNIXTIME(createdon) <= {{end_date}} GROUP BY week UNION ALL SELECT DATE_FORMAT(FROM_UNIXTIME(stagedate), '%Y-W%v') AS week, 'Interviews Conducted' AS metric, COUNT(*) AS count FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid IN (34494701, 34494702, 34494703, 34494704) AND FROM_UNIXTIME(stagedate) >= {{start_date}} AND FROM_UNIXTIME(stagedate) <= {{end_date}} GROUP BY week UNION ALL SELECT DATE_FORMAT(FROM_UNIXTIME(stagedate), '%Y-W%v') AS week, 'Placements Made' AS metric, COUNT(*) AS count FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid = 8 AND FROM_UNIXTIME(stagedate) >= {{start_date}} AND FROM_UNIXTIME(stagedate) <= {{end_date}} GROUP BY week) combined ORDER BY week, metric
+    template-tags:
+    - default: '2026-04-01'
+      display-name: Start Date
+      id: a1b2c3d4-0005-0005-0005-000000000001
+      name: start_date
+      type: date
+    - default: '2026-06-30'
+      display-name: End Date
+      id: a1b2c3d4-0005-0005-0005-000000000002
+      name: end_date
+      type: date
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: week
+  effective_type: type/Text
+  field_ref:
+  - field
+  - week
+  - base-type: type/Text
+  name: week
+  semantic_type: null
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: metric
+  effective_type: type/Text
+  field_ref:
+  - field
+  - metric
+  - base-type: type/Text
+  name: metric
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: count
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - count
+  - base-type: type/BigInteger
+  name: count
+  semantic_type: type/Quantity
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - week
+  - metric
+  graph.metrics:
+  - count
+  graph.x_axis.axis_enabled: true
+  graph.x_axis.title_text: Week
+  graph.y_axis.axis_enabled: true
+  graph.y_axis.title_text: Count
+card_schema: 23
+serdes/meta:
+- id: y1gwWclAAeEJQ55f5nAFG
+  label: recruiting_activity_—_last_90_days__weekly_
+  model: Card
+type: question

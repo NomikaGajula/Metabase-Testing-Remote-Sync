@@ -1,0 +1,76 @@
+name: Jobs and Deals Totals
+entity_id: jxRmTvbUgxdeDwzwzpN1r
+created_at: '2026-06-17T14:43:44.613448Z'
+creator_id: manjunath@recruitcrm.io
+display: table
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+collection_position: 2
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: "WITH unified_data AS (\n    SELECT\n        `deals_1287967`.`owner_name` AS recruiter,\n        DATE(`deals_1287967`.`close_date`) AS date,\n        `deals_1287967`.`deal_stage` AS placement_type,\n        COUNT(DISTINCT `deals_1287967`.`id`) AS count,\n        'deals' AS source\n    FROM `deals_1287967` \n\t-- WHERE  `deals_1287967`.`deal_stage` IN ('Won', 'Candidate Started', 'Invoice Sent','Contract Completed','Renewal Agreed')\n    GROUP BY recruiter, date, placement_type\n\n    UNION ALL\n\n    SELECT\n        `jobs_1287967`.`owner_name` AS recruiter,\n        DATE(`jobs_1287967`.`created_on`) AS date,\n        `jobs_1287967`.`job_type_label` AS placement_type,\n        SUM(`jobs_1287967`.`no_of_openings`) AS count,\n        'jobs' AS source\n    FROM `jobs_1287967`\n    GROUP BY recruiter, date, placement_type\n)\nSELECT\n    recruiter,\n    date,\n    placement_type,\n    SUM(CASE WHEN source = 'deals' THEN count ELSE 0 END) AS total_deals,\n    SUM(CASE WHEN source = 'jobs' THEN count ELSE 0 END) AS total_jobs\nFROM unified_data\nGROUP BY recruiter, date, placement_type\nORDER BY recruiter, date, placement_type;\n"
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: MEDIUMTEXT
+  display_name: recruiter
+  effective_type: type/Text
+  field_ref:
+  - field
+  - recruiter
+  - base-type: type/Text
+  name: recruiter
+  semantic_type: null
+- base_type: type/Date
+  database_type: DATE
+  display_name: date
+  effective_type: type/Date
+  field_ref:
+  - field
+  - date
+  - base-type: type/Date
+  name: date
+  semantic_type: null
+- base_type: type/Text
+  database_type: MEDIUMTEXT
+  display_name: placement_type
+  effective_type: type/Text
+  field_ref:
+  - field
+  - placement_type
+  - base-type: type/Text
+  name: placement_type
+  semantic_type: type/Category
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: total_deals
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - total_deals
+  - base-type: type/BigInteger
+  name: total_deals
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: total_jobs
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - total_jobs
+  - base-type: type/BigInteger
+  name: total_jobs
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+  table.cell_column: total_deals
+  table.pivot_column: recruiter
+card_schema: 23
+serdes/meta:
+- id: jxRmTvbUgxdeDwzwzpN1r
+  label: jobs_and_deals_totals
+  model: Card
+type: model

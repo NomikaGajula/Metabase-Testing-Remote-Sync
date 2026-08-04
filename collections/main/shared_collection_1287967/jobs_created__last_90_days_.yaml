@@ -1,0 +1,44 @@
+name: Jobs Created (Last 90 Days)
+entity_id: 6VR_TFug97G9EAF6SH6gc
+created_at: '2026-06-30T09:40:02.812225Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COUNT(*) AS jobs_created FROM jobs_1287967 WHERE created_on >= {{start_date}} AND created_on <= {{end_date}}
+    template-tags:
+    - default: '2026-04-01'
+      display-name: Start Date
+      id: a1b2c3d4-0001-0001-0001-000000000001
+      name: start_date
+      type: date
+    - default: '2026-06-30'
+      display-name: End Date
+      id: a1b2c3d4-0001-0001-0001-000000000002
+      name: end_date
+      type: date
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: jobs_created
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - jobs_created
+  - base-type: type/BigInteger
+  name: jobs_created
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: 6VR_TFug97G9EAF6SH6gc
+  label: jobs_created__last_90_days_
+  model: Card
+type: question

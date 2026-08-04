@@ -1,0 +1,45 @@
+name: Resume Added vs Not Added
+entity_id: dCeZx6BUxlhOA99iQxpca
+created_at: '2026-06-29T17:55:05.990594Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: pie
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT is_resume_added AS resume_added, COUNT(*) AS count FROM candidates_1287967 GROUP BY is_resume_added
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: MEDIUMTEXT
+  display_name: resume_added
+  effective_type: type/Text
+  field_ref:
+  - field
+  - resume_added
+  - base-type: type/Text
+  name: resume_added
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: count
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - count
+  - base-type: type/BigInteger
+  name: count
+  semantic_type: type/Quantity
+visualization_settings:
+  column_settings: null
+  pie.dimension: resume_added
+  pie.metric: count
+card_schema: 23
+serdes/meta:
+- id: dCeZx6BUxlhOA99iQxpca
+  label: resume_added_vs_not_added
+  model: Card
+type: question

@@ -1,0 +1,9 @@
+name: Shared Collection 1287967
+entity_id: JgdT0v7AK8nn5bLaC1YP9
+slug: shared_collection_1287967
+created_at: '2026-04-14T10:32:28.148238Z'
+serdes/meta:
+- id: JgdT0v7AK8nn5bLaC1YP9
+  label: shared_collection_1287967
+  model: Collection
+is_remote_synced: true

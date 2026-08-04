@@ -1,0 +1,140 @@
+name: No of Jobs By company and Contact
+entity_id: W8pM-rPJTsCn0jWdQP3EM
+created_at: '2026-06-17T14:35:16.48944Z'
+creator_id: testingmetabase@yopmail.com
+display: pivot
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - effective-type: type/Integer
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+          join-alias: Jobs 1287967
+        - - Test Starrocks Dev
+          - null
+          - jobs_1287967
+          - id
+    breakout:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - company_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+        join-alias: Jobs 1287967
+      - - Test Starrocks Dev
+        - null
+        - jobs_1287967
+        - job_name
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+        join-alias: Contacts 1287967
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - contact_name
+    joins:
+    - alias: Jobs 1287967
+      conditions:
+      - - =
+        - {}
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+          - - Test Starrocks Dev
+            - null
+            - companies_1287967
+            - id
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+            join-alias: Jobs 1287967
+          - - Test Starrocks Dev
+            - null
+            - jobs_1287967
+            - join_for_companies_table
+      fields: all
+      stages:
+      - source-table:
+        - Test Starrocks Dev
+        - null
+        - jobs_1287967
+        lib/options:
+          lib/uuid: 0ec7310b-e900-4bd7-bf66-96bacff45ac0
+        lib/type: mbql.stage/mbql
+      strategy: left-join
+      lib/options:
+        lib/uuid: 78239c78-458a-4e9a-a08d-9099a976c372
+      lib/type: mbql/join
+    - alias: Contacts 1287967
+      conditions:
+      - - =
+        - {}
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+          - - Test Starrocks Dev
+            - null
+            - companies_1287967
+            - id
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+            join-alias: Contacts 1287967
+          - - Test Starrocks Dev
+            - null
+            - contacts_1287967
+            - join_for_companies_table
+      fields: all
+      stages:
+      - source-table:
+        - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        lib/options:
+          lib/uuid: 155d0eb1-e737-4714-8a6c-1b230f3115ce
+        lib/type: mbql.stage/mbql
+      strategy: left-join
+      lib/options:
+        lib/uuid: 974c1646-0e01-4005-993b-061938b5be48
+      lib/type: mbql/join
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - companies_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  pivot_table.column_split:
+    columns: []
+    rows:
+    - company_name
+    - contact_name
+    - job_name
+    values:
+    - count
+  pivot_table.column_widths:
+    leftHeaderWidths:
+    - 240
+    - 234
+    - 210
+    totalLeftHeaderWidths: 684
+    valueHeaderWidths: {}
+card_schema: 23
+serdes/meta:
+- id: W8pM-rPJTsCn0jWdQP3EM
+  label: no_of_jobs_by_company_and_contact
+  model: Card
+type: question

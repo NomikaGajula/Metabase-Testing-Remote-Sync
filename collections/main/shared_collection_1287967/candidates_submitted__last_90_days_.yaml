@@ -1,0 +1,44 @@
+name: Candidates Submitted (Last 90 Days)
+entity_id: 0Dd1wruISV48d7MtqWs7j
+created_at: '2026-06-30T09:40:04.221347Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COUNT(*) AS candidates_submitted FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid = 1 AND FROM_UNIXTIME(createdon) >= {{start_date}} AND FROM_UNIXTIME(createdon) <= {{end_date}}
+    template-tags:
+    - default: '2026-04-01'
+      display-name: Start Date
+      id: a1b2c3d4-0002-0002-0002-000000000001
+      name: start_date
+      type: date
+    - default: '2026-06-30'
+      display-name: End Date
+      id: a1b2c3d4-0002-0002-0002-000000000002
+      name: end_date
+      type: date
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: candidates_submitted
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - candidates_submitted
+  - base-type: type/BigInteger
+  name: candidates_submitted
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: 0Dd1wruISV48d7MtqWs7j
+  label: candidates_submitted__last_90_days_
+  model: Card
+type: question

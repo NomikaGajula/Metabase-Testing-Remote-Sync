@@ -1,0 +1,10 @@
+name: Test Collection
+entity_id: I-GJKGT2fpAHQGgpKyBnk
+slug: test_collection
+created_at: '2026-05-31T15:18:34.527515Z'
+parent_id: JgdT0v7AK8nn5bLaC1YP9
+serdes/meta:
+- id: I-GJKGT2fpAHQGgpKyBnk
+  label: test_collection
+  model: Collection
+is_remote_synced: true

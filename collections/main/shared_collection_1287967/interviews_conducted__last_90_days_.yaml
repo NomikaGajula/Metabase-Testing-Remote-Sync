@@ -1,0 +1,44 @@
+name: Interviews Conducted (Last 90 Days)
+entity_id: NjDAEMvPSxeKLy9m1BMiW
+created_at: '2026-06-30T09:40:05.530039Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COUNT(*) AS interviews_conducted FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid IN (34494701, 34494702, 34494703, 34494704) AND FROM_UNIXTIME(stagedate) >= {{start_date}} AND FROM_UNIXTIME(stagedate) <= {{end_date}}
+    template-tags:
+    - default: '2026-04-01'
+      display-name: Start Date
+      id: a1b2c3d4-0003-0003-0003-000000000001
+      name: start_date
+      type: date
+    - default: '2026-06-30'
+      display-name: End Date
+      id: a1b2c3d4-0003-0003-0003-000000000002
+      name: end_date
+      type: date
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: interviews_conducted
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - interviews_conducted
+  - base-type: type/BigInteger
+  name: interviews_conducted
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: NjDAEMvPSxeKLy9m1BMiW
+  label: interviews_conducted__last_90_days_
+  model: Card
+type: question

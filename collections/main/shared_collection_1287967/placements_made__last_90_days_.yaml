@@ -1,0 +1,44 @@
+name: Placements Made (Last 90 Days)
+entity_id: LSvF4YKDa2FJGnOUs7bbM
+created_at: '2026-06-30T09:40:06.849259Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COUNT(*) AS placements_made FROM tblassignjobcandidate WHERE accountid = 1287967 AND is_deleted = 0 AND candidatestatusid = 8 AND FROM_UNIXTIME(stagedate) >= {{start_date}} AND FROM_UNIXTIME(stagedate) <= {{end_date}}
+    template-tags:
+    - default: '2026-04-01'
+      display-name: Start Date
+      id: a1b2c3d4-0004-0004-0004-000000000001
+      name: start_date
+      type: date
+    - default: '2026-06-30'
+      display-name: End Date
+      id: a1b2c3d4-0004-0004-0004-000000000002
+      name: end_date
+      type: date
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: placements_made
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - placements_made
+  - base-type: type/BigInteger
+  name: placements_made
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: LSvF4YKDa2FJGnOUs7bbM
+  label: placements_made__last_90_days_
+  model: Card
+type: question

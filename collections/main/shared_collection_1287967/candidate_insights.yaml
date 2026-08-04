@@ -1,0 +1,172 @@
+name: Candidate Insights
+description: Overview of candidate data for account 1287967 (testingmetabase@yopmail.com)
+entity_id: N5t-b-sEdMlD-_b0J-HoK
+created_at: '2026-06-29T17:56:09.965513Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+serdes/meta:
+- id: N5t-b-sEdMlD-_b0J-HoK
+  label: candidate_insights
+  model: Dashboard
+dashcards:
+- entity_id: BYkxWBIiMki4x6EL8zCPj
+  card_id: f_-ufEoEl3zK3brVBvWJP
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 0
+  col: 0
+  size_x: 6
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: BYkxWBIiMki4x6EL8zCPj
+    model: DashboardCard
+- entity_id: EHoGW5FPfPuAal0G5tUec
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 0
+  col: 6
+  size_x: 18
+  size_y: 3
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+    text: |-
+      # Candidate Insights
+      A comprehensive overview of all 1,314 candidates — sourcing channels, geography, experience, and pipeline readiness.
+    virtual_card:
+      display: text
+      name: ''
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: EHoGW5FPfPuAal0G5tUec
+    model: DashboardCard
+- entity_id: eBkt3GG5gkGeRcCMYmmwY
+  card_id: j-Ycw4CoDqbyrUn_ck2c3
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 3
+  col: 0
+  size_x: 12
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: eBkt3GG5gkGeRcCMYmmwY
+    model: DashboardCard
+- entity_id: JgqBb1tAEjWtZood9e_JP
+  card_id: zW5dVwI97FQVpCEtxL3L0
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 3
+  col: 12
+  size_x: 12
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: JgqBb1tAEjWtZood9e_JP
+    model: DashboardCard
+- entity_id: v8hpO3-QBjrfAFrjuc1RQ
+  card_id: sC4VNsVQmlauKbMk4OZEJ
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 11
+  col: 0
+  size_x: 8
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: v8hpO3-QBjrfAFrjuc1RQ
+    model: DashboardCard
+- entity_id: zwumT1hVycfwCPvmLPoBs
+  card_id: dCeZx6BUxlhOA99iQxpca
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 11
+  col: 8
+  size_x: 8
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: zwumT1hVycfwCPvmLPoBs
+    model: DashboardCard
+- entity_id: U0pOkJDLqPmIPK_cj7XeD
+  card_id: 3SjK6XU4jHPd7cS2KrdtO
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 11
+  col: 16
+  size_x: 8
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: U0pOkJDLqPmIPK_cj7XeD
+    model: DashboardCard
+- entity_id: tRh18r0Z5M9iVEGfXDGFN
+  card_id: LxcmDpZ1aGaNVgiGPqBWw
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 19
+  col: 0
+  size_x: 12
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: tRh18r0Z5M9iVEGfXDGFN
+    model: DashboardCard
+- entity_id: _RluttunG1PJco_VaNve5
+  card_id: qnql-0w1K6-3oGDiVnTF-
+  created_at: '2026-06-29T17:56:10.387782Z'
+  row: 19
+  col: 12
+  size_x: 12
+  size_y: 8
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: N5t-b-sEdMlD-_b0J-HoK
+    model: Dashboard
+  - id: _RluttunG1PJco_VaNve5
+    model: DashboardCard
+tabs: []
+width: fixed

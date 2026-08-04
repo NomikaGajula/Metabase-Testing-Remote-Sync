@@ -1,0 +1,26 @@
+name: testing dashboard
+entity_id: fDEw_cs0pJ-JzrOg_zrEz
+created_at: '2026-05-31T20:41:03.179139Z'
+creator_id: nomika@recruitcrm.io
+collection_id: I-GJKGT2fpAHQGgpKyBnk
+collection_position: 1
+parameters:
+- id: 8aa0cb59
+  name: creator
+  position: 1
+  sectionId: string
+  slug: creator
+  type: string/=
+- id: bd6eab26
+  name: Date
+  position: 0
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: fDEw_cs0pJ-JzrOg_zrEz
+  label: testing_dashboard
+  model: Dashboard
+dashcards: []
+tabs: []
+width: fixed

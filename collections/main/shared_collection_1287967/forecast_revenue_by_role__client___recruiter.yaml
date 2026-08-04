@@ -1,0 +1,102 @@
+name: Forecast Revenue by Role, Client & Recruiter
+entity_id: Fdg6UMPBkR_wVJ0JL5Zt4
+created_at: '2026-06-30T09:29:30.161679Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: table
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COALESCE(owner_name, '(Unassigned)') AS recruiter, COALESCE(job_name, '(No Role)') AS role, COALESCE(company_name, '(No Client)') AS client, COALESCE(deal_stage, 'open') AS stage, SUM(deal_value) AS forecast_revenue, COUNT(*) AS deals FROM deals_1287967 WHERE is_archived = 0 AND deal_value IS NOT NULL GROUP BY owner_name, job_name, company_name, deal_stage ORDER BY forecast_revenue DESC
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: recruiter
+  effective_type: type/Text
+  field_ref:
+  - field
+  - recruiter
+  - base-type: type/Text
+  name: recruiter
+  semantic_type: null
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: role
+  effective_type: type/Text
+  field_ref:
+  - field
+  - role
+  - base-type: type/Text
+  name: role
+  semantic_type: type/Category
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: client
+  effective_type: type/Text
+  field_ref:
+  - field
+  - client
+  - base-type: type/Text
+  name: client
+  semantic_type: null
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: stage
+  effective_type: type/Text
+  field_ref:
+  - field
+  - stage
+  - base-type: type/Text
+  name: stage
+  semantic_type: null
+- base_type: type/Decimal
+  database_type: DECIMAL
+  display_name: forecast_revenue
+  effective_type: type/Decimal
+  field_ref:
+  - field
+  - forecast_revenue
+  - base-type: type/Decimal
+  name: forecast_revenue
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: deals
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - deals
+  - base-type: type/BigInteger
+  name: deals
+  semantic_type: null
+visualization_settings:
+  column_settings:
+    '["name","forecast_revenue"]':
+      currency: USD
+      currency_style: symbol
+      decimals: 0
+      number_style: currency
+  table.columns:
+  - enabled: true
+    name: recruiter
+  - enabled: true
+    name: role
+  - enabled: true
+    name: client
+  - enabled: true
+    name: stage
+  - enabled: true
+    name: forecast_revenue
+  - enabled: true
+    name: deals
+  table.pivot: false
+card_schema: 23
+serdes/meta:
+- id: Fdg6UMPBkR_wVJ0JL5Zt4
+  label: forecast_revenue_by_role__client___recruiter
+  model: Card
+type: question

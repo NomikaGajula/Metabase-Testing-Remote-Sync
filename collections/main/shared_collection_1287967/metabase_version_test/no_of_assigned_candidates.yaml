@@ -1,0 +1,36 @@
+name: No of Assigned Candidates
+entity_id: HgLnNLzvCe8-IY9FMG03S
+created_at: '2026-06-17T14:27:05.885901Z'
+creator_id: manjunath@recruitcrm.io
+display: scalar
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - assign_job_candidate_1287967
+          - id
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - assign_job_candidate_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  scalar.segments: []
+card_schema: 23
+serdes/meta:
+- id: HgLnNLzvCe8-IY9FMG03S
+  label: no_of_assigned_candidates
+  model: Card
+type: question

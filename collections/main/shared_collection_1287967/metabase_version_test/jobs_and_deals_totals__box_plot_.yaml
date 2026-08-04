@@ -1,0 +1,32 @@
+name: Jobs and Deals Totals (Box Plot)
+entity_id: Jg3x-PXfCcNs3T__lF4Mj
+created_at: '2026-06-17T14:46:31.131453Z'
+creator_id: testingmetabase@yopmail.com
+display: boxplot
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - source-card: jxRmTvbUgxdeDwzwzpN1r
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - recruiter
+  - placement_type
+  graph.metrics:
+  - total_deals
+  graph.series_order: null
+  graph.series_order_dimension: null
+  graph.x_axis.scale: ordinal
+  table.cell_column: total_deals
+  table.pivot_column: recruiter
+card_schema: 23
+serdes/meta:
+- id: Jg3x-PXfCcNs3T__lF4Mj
+  label: jobs_and_deals_totals__box_plot_
+  model: Card
+type: question

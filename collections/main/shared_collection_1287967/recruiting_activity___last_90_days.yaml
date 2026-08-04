@@ -1,0 +1,171 @@
+name: Recruiting Activity — Last 90 Days
+description: Jobs created, candidates submitted, interviews conducted, and placements made for account 1287967
+entity_id: sihCH-JgPgSA8wjMsz-XC
+created_at: '2026-06-30T09:41:07.983634Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters:
+- default: '2026-04-01'
+  id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+  name: Start Date
+  position: 0
+  slug: start_date
+  type: date/single
+- default: '2026-06-30'
+  id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+  name: End Date
+  position: 1
+  slug: end_date
+  type: date/single
+serdes/meta:
+- id: sihCH-JgPgSA8wjMsz-XC
+  label: recruiting_activity_—_last_90_days
+  model: Dashboard
+dashcards:
+- entity_id: g9vW45AKJ1DR406-b-peR
+  card_id: 6VR_TFug97G9EAF6SH6gc
+  created_at: '2026-06-30T09:41:08.503974Z'
+  row: 0
+  col: 0
+  size_x: 6
+  size_y: 4
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 6VR_TFug97G9EAF6SH6gc
+    parameter_id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+    target:
+    - variable
+    - - template-tag
+      - start_date
+  - card_id: 6VR_TFug97G9EAF6SH6gc
+    parameter_id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+    target:
+    - variable
+    - - template-tag
+      - end_date
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: sihCH-JgPgSA8wjMsz-XC
+    model: Dashboard
+  - id: g9vW45AKJ1DR406-b-peR
+    model: DashboardCard
+- entity_id: -r0asKboeRWA4pWjeYq0y
+  card_id: 0Dd1wruISV48d7MtqWs7j
+  created_at: '2026-06-30T09:41:08.503974Z'
+  row: 0
+  col: 6
+  size_x: 6
+  size_y: 4
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 0Dd1wruISV48d7MtqWs7j
+    parameter_id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+    target:
+    - variable
+    - - template-tag
+      - start_date
+  - card_id: 0Dd1wruISV48d7MtqWs7j
+    parameter_id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+    target:
+    - variable
+    - - template-tag
+      - end_date
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: sihCH-JgPgSA8wjMsz-XC
+    model: Dashboard
+  - id: -r0asKboeRWA4pWjeYq0y
+    model: DashboardCard
+- entity_id: YWZDVu4xUmtfAfXgu_IF1
+  card_id: NjDAEMvPSxeKLy9m1BMiW
+  created_at: '2026-06-30T09:41:08.503974Z'
+  row: 0
+  col: 12
+  size_x: 6
+  size_y: 4
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: NjDAEMvPSxeKLy9m1BMiW
+    parameter_id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+    target:
+    - variable
+    - - template-tag
+      - start_date
+  - card_id: NjDAEMvPSxeKLy9m1BMiW
+    parameter_id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+    target:
+    - variable
+    - - template-tag
+      - end_date
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: sihCH-JgPgSA8wjMsz-XC
+    model: Dashboard
+  - id: YWZDVu4xUmtfAfXgu_IF1
+    model: DashboardCard
+- entity_id: nir34r9hPwf7sTg1asaDJ
+  card_id: LSvF4YKDa2FJGnOUs7bbM
+  created_at: '2026-06-30T09:41:08.503974Z'
+  row: 0
+  col: 18
+  size_x: 6
+  size_y: 4
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: LSvF4YKDa2FJGnOUs7bbM
+    parameter_id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+    target:
+    - variable
+    - - template-tag
+      - start_date
+  - card_id: LSvF4YKDa2FJGnOUs7bbM
+    parameter_id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+    target:
+    - variable
+    - - template-tag
+      - end_date
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: sihCH-JgPgSA8wjMsz-XC
+    model: Dashboard
+  - id: nir34r9hPwf7sTg1asaDJ
+    model: DashboardCard
+- entity_id: Ago46htiOjUJ_VFtdTr0J
+  card_id: y1gwWclAAeEJQ55f5nAFG
+  created_at: '2026-06-30T09:41:08.503974Z'
+  row: 4
+  col: 0
+  size_x: 24
+  size_y: 10
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: y1gwWclAAeEJQ55f5nAFG
+    parameter_id: f1a2b3c4-aaaa-aaaa-aaaa-000000000001
+    target:
+    - variable
+    - - template-tag
+      - start_date
+  - card_id: y1gwWclAAeEJQ55f5nAFG
+    parameter_id: f1a2b3c4-bbbb-bbbb-bbbb-000000000002
+    target:
+    - variable
+    - - template-tag
+      - end_date
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: sihCH-JgPgSA8wjMsz-XC
+    model: Dashboard
+  - id: Ago46htiOjUJ_VFtdTr0J
+    model: DashboardCard
+tabs: []
+width: fixed

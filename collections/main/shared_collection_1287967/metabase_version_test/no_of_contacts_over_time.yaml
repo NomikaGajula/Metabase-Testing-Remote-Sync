@@ -1,0 +1,50 @@
+name: No of Contacts Over Time
+entity_id: Qeg7CJ76ddFSkjqvV4y9F
+created_at: '2026-06-17T14:37:12.210347Z'
+creator_id: testingmetabase@yopmail.com
+display: line
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - contacts_1287967
+          - id
+    breakout:
+    - - field
+      - base-type: type/DateTime
+        effective-type: type/DateTime
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - created_on
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - contacts_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - created_on
+  graph.label_value_frequency: all
+  graph.metrics:
+  - count
+  graph.show_values: true
+  graph.x_axis.scale: ordinal
+card_schema: 23
+serdes/meta:
+- id: Qeg7CJ76ddFSkjqvV4y9F
+  label: no_of_contacts_over_time
+  model: Card
+type: question

@@ -1,0 +1,28 @@
+name: Candidates by Source
+entity_id: j-Ycw4CoDqbyrUn_ck2c3
+created_at: '2026-06-29T17:54:50.671893Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: bar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT CASE WHEN source = ' THEN 'Unknown' ELSE source END AS source, COUNT(*) AS count FROM candidates_1287967 GROUP BY source ORDER BY count DESC
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - source
+  graph.metrics:
+  - count
+  graph.x_axis.axis_enabled: true
+  graph.y_axis.axis_enabled: true
+card_schema: 23
+serdes/meta:
+- id: j-Ycw4CoDqbyrUn_ck2c3
+  label: candidates_by_source
+  model: Card
+type: question

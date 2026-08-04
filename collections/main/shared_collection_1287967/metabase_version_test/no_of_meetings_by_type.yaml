@@ -1,0 +1,84 @@
+name: No of Meetings By Type
+entity_id: jiqTQeACtU5yuMw_xgv8V
+created_at: '2026-06-17T14:36:26.405367Z'
+creator_id: testingmetabase@yopmail.com
+display: bar
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - companies_1287967
+          - id
+    breakout:
+    - - field
+      - base-type: type/Text
+        effective-type: type/Text
+        join-alias: Meetings 1287967
+      - - Test Starrocks Dev
+        - null
+        - meetings_1287967
+        - meeting_type
+    joins:
+    - alias: Meetings 1287967
+      conditions:
+      - - =
+        - {}
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+          - - Test Starrocks Dev
+            - null
+            - companies_1287967
+            - id
+        - - field
+          - base-type: type/Integer
+            effective-type: type/Integer
+            join-alias: Meetings 1287967
+          - - Test Starrocks Dev
+            - null
+            - meetings_1287967
+            - join_for_companies_table
+      fields: all
+      stages:
+      - source-table:
+        - Test Starrocks Dev
+        - null
+        - meetings_1287967
+        lib/options:
+          lib/uuid: 8bc0a34a-1261-4d9b-b94b-9f54a3ea9620
+        lib/type: mbql.stage/mbql
+      strategy: left-join
+      lib/options:
+        lib/uuid: 9914d887-ef17-467a-a542-6507e6f8f1ef
+      lib/type: mbql/join
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - companies_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - meeting_type
+  graph.label_value_frequency: all
+  graph.metrics:
+  - count
+  graph.show_values: true
+  graph.x_axis.scale: ordinal
+card_schema: 23
+serdes/meta:
+- id: jiqTQeACtU5yuMw_xgv8V
+  label: no_of_meetings_by_type
+  model: Card
+type: question

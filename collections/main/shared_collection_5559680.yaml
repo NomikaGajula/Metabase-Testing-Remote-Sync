@@ -1,0 +1,10 @@
+name: Shared Collection 5559680
+description: Shared Collection for 5559680
+entity_id: AK_nKvc43_z8bSUw1HGqg
+slug: shared_collection_5559680
+created_at: '2026-08-04T09:15:51.417296Z'
+serdes/meta:
+- id: AK_nKvc43_z8bSUw1HGqg
+  label: shared_collection_5559680
+  model: Collection
+is_remote_synced: true

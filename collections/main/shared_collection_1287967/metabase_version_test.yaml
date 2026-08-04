@@ -1,0 +1,10 @@
+name: Metabase Version Test
+entity_id: 8fpJG9ZGXhZS0cGiSRcZ1
+slug: metabase_version_test
+created_at: '2026-06-17T14:26:31.671969Z'
+parent_id: JgdT0v7AK8nn5bLaC1YP9
+serdes/meta:
+- id: 8fpJG9ZGXhZS0cGiSRcZ1
+  label: metabase_version_test
+  model: Collection
+is_remote_synced: true

@@ -1,0 +1,146 @@
+name: Test
+entity_id: c9AC1QalZID4_qZ7uZOOX
+created_at: '2026-05-22T06:17:33.968737Z'
+creator_id: testingmetabase@yopmail.com
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - assign_job_candidate_1287967
+          - id
+    filters:
+    - - in
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - assign_job_candidate_1287967
+          - id
+      - 17961232
+      - 17961233
+      - 17961234
+      - 17961235
+      - 17961236
+      - 17961237
+      - 17961238
+      - 17961239
+      - 17961240
+      - 17961241
+      - 17961242
+      - 17961243
+      - 17961244
+      - 17961245
+      - 17961246
+      - 17961247
+      - 17961248
+      - 17961249
+      - 17961250
+      - 17961251
+      - 17961252
+      - 17961253
+      - 17961254
+      - 17961255
+      - 17961256
+      - 17961257
+      - 17961258
+      - 17961259
+      - 17961260
+      - 17961261
+      - 17961262
+      - 17961263
+      - 17961264
+      - 17961265
+      - 17961266
+      - 17961267
+      - 17961268
+      - 17961269
+      - 17961270
+      - 17961271
+      - 17961272
+      - 17961273
+      - 17961274
+      - 17961275
+      - 17961276
+      - 17961277
+      - 17961278
+      - 17961279
+      - 17961280
+      - 17961281
+      - 17961295
+      - 17961296
+      - 17961297
+      - 17961298
+      - 17961299
+      - 17961300
+      - 17961301
+      - 17961302
+      - 17961303
+      - 17961304
+      - 17961305
+      - 17961306
+      - 17961307
+      - 17961308
+      - 17961309
+      - 17961310
+      - 17961311
+      - 17961312
+      - 17961313
+      - 17961314
+      - 17961315
+      - 17961316
+      - 17961317
+      - 17961318
+      - 17961319
+      - 17961320
+      - 17961321
+      - 17961322
+      - 17961323
+      - 17961324
+      - 17961325
+      - 17961326
+      - 17961327
+      - 17961328
+      - 17961329
+      - 17961330
+      - 17961331
+      - 17961332
+      - 17961333
+      - 17961334
+      - 17961335
+      - 17961336
+      - 17961337
+      - 17961338
+      - 17961339
+      - 17961340
+      - 17961341
+      - 17961342
+      - 17961343
+      - 17961344
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - assign_job_candidate_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  scalar.segments: []
+card_schema: 23
+serdes/meta:
+- id: c9AC1QalZID4_qZ7uZOOX
+  label: test
+  model: Card
+type: question

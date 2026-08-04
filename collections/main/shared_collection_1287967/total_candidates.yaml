@@ -1,0 +1,33 @@
+name: Total Candidates
+entity_id: f_-ufEoEl3zK3brVBvWJP
+created_at: '2026-06-29T17:54:38.720489Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: scalar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT COUNT(*) AS total_candidates FROM candidates_1287967
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: total_candidates
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - total_candidates
+  - base-type: type/BigInteger
+  name: total_candidates
+  semantic_type: null
+visualization_settings:
+  column_settings: null
+card_schema: 23
+serdes/meta:
+- id: f_-ufEoEl3zK3brVBvWJP
+  label: total_candidates
+  model: Card
+type: question

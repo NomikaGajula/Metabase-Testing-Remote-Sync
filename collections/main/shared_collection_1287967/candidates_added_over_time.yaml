@@ -1,0 +1,49 @@
+name: Candidates Added Over Time
+entity_id: qnql-0w1K6-3oGDiVnTF-
+created_at: '2026-06-29T17:55:18.43848Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: line
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT DATE_FORMAT(created_on, '%Y-%m') AS month, COUNT(*) AS count FROM candidates_1287967 GROUP BY month ORDER BY month ASC
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: month
+  effective_type: type/Text
+  field_ref:
+  - field
+  - month
+  - base-type: type/Text
+  name: month
+  semantic_type: null
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: count
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - count
+  - base-type: type/BigInteger
+  name: count
+  semantic_type: type/Quantity
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - month
+  graph.metrics:
+  - count
+  graph.x_axis.axis_enabled: true
+  graph.y_axis.axis_enabled: true
+card_schema: 23
+serdes/meta:
+- id: qnql-0w1K6-3oGDiVnTF-
+  label: candidates_added_over_time
+  model: Card
+type: question

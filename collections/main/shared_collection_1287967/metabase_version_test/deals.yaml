@@ -1,0 +1,33 @@
+name: Deals
+entity_id: f2RUAsXclDW8r7I7KVxTY
+created_at: '2026-06-17T14:54:41.369546Z'
+creator_id: testingmetabase@yopmail.com
+display: table
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - source-table:
+    - Test Starrocks Dev
+    - null
+    - deals_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - created_on
+  graph.label_value_frequency: all
+  graph.metrics: []
+  graph.show_values: true
+  graph.x_axis.scale: ordinal
+  table.cell_column: sr_no
+  table.pivot_column: currency_country
+card_schema: 23
+serdes/meta:
+- id: f2RUAsXclDW8r7I7KVxTY
+  label: deals
+  model: Card
+type: question

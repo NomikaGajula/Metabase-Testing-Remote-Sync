@@ -1,0 +1,49 @@
+name: Candidates by Country (Top 10)
+entity_id: zW5dVwI97FQVpCEtxL3L0
+created_at: '2026-06-29T17:54:52.288798Z'
+creator_id: api-key-user-b6138ed6-2a58-4938-98cc-34ddebb86a41@api-key.invalid
+display: bar
+collection_id: JgdT0v7AK8nn5bLaC1YP9
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - native: SELECT country, COUNT(*) AS count FROM candidates_1287967 WHERE country != '' GROUP BY country ORDER BY count DESC LIMIT 10
+    lib/type: mbql.stage/native
+  lib/type: mbql/query
+result_metadata:
+- base_type: type/Text
+  database_type: VARCHAR
+  display_name: country
+  effective_type: type/Text
+  field_ref:
+  - field
+  - country
+  - base-type: type/Text
+  name: country
+  semantic_type: type/Country
+- base_type: type/BigInteger
+  database_type: BIGINT
+  display_name: count
+  effective_type: type/BigInteger
+  field_ref:
+  - field
+  - count
+  - base-type: type/BigInteger
+  name: count
+  semantic_type: type/Quantity
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - country
+  graph.metrics:
+  - count
+  graph.x_axis.axis_enabled: true
+  graph.y_axis.axis_enabled: true
+card_schema: 23
+serdes/meta:
+- id: zW5dVwI97FQVpCEtxL3L0
+  label: candidates_by_country__top_10_
+  model: Card
+type: question

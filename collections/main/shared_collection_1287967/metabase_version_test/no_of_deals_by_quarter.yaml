@@ -1,0 +1,51 @@
+name: No of Deals By Quarter
+entity_id: 1fsXSFVeVHrmgohJoJ_4D
+created_at: '2026-06-17T14:37:51.954301Z'
+creator_id: testingmetabase@yopmail.com
+display: smartscalar
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+parameters: []
+parameter_mappings: []
+dataset_query:
+  database: Test Starrocks Dev
+  stages:
+  - aggregation:
+    - - distinct
+      - {}
+      - - field
+        - base-type: type/Integer
+          effective-type: type/Integer
+        - - Test Starrocks Dev
+          - null
+          - deals_1287967
+          - id
+    breakout:
+    - - field
+      - base-type: type/DateTime
+        effective-type: type/DateTime
+        temporal-unit: quarter
+      - - Test Starrocks Dev
+        - null
+        - deals_1287967
+        - close_date
+    source-table:
+    - Test Starrocks Dev
+    - null
+    - deals_1287967
+    lib/type: mbql.stage/mbql
+  lib/type: mbql/query
+visualization_settings:
+  column_settings: null
+  graph.dimensions:
+  - created_on
+  graph.label_value_frequency: all
+  graph.metrics:
+  - count
+  graph.show_values: true
+  graph.x_axis.scale: ordinal
+card_schema: 23
+serdes/meta:
+- id: 1fsXSFVeVHrmgohJoJ_4D
+  label: no_of_deals_by_quarter
+  model: Card
+type: question

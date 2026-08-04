@@ -1,0 +1,715 @@
+name: Metabase Version Test Dashboard
+entity_id: ftG8ZmS7jx0N-Jh7ao9lA
+created_at: '2026-06-17T14:46:59.366727Z'
+creator_id: testingmetabase@yopmail.com
+collection_id: 8fpJG9ZGXhZS0cGiSRcZ1
+collection_position: 1
+parameters:
+- id: 37b46d6c
+  name: Time grouping
+  position: 1
+  sectionId: temporal-unit
+  slug: time_grouping
+  type: temporal-unit
+- id: 3adeee63
+  name: Number
+  position: 3
+  sectionId: number
+  slug: number
+  type: number/>=
+- id: 4fbe5547
+  name: Recruiter
+  position: 2
+  sectionId: string
+  slug: recruiter
+  type: string/=
+- id: f4520ff3
+  name: ID
+  position: 4
+  sectionId: id
+  slug: id
+  type: number/=
+- id: f7a22c81
+  name: Date
+  position: 0
+  sectionId: date
+  slug: date
+  type: date/all-options
+serdes/meta:
+- id: ftG8ZmS7jx0N-Jh7ao9lA
+  label: metabase_version_test_dashboard
+  model: Dashboard
+dashcards:
+- entity_id: X6jAcn_WKmxcqfU7C5c-n
+  card_id: HgLnNLzvCe8-IY9FMG03S
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 0
+  col: 0
+  size_x: 12
+  size_y: 4
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: HgLnNLzvCe8-IY9FMG03S
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - assign_job_candidate_1287967
+        - job_owner_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: HgLnNLzvCe8-IY9FMG03S
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - assign_job_candidate_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: HgLnNLzvCe8-IY9FMG03S
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - assign_job_candidate_1287967
+        - hiring_stage_date
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    click_behavior:
+      linkType: question
+      parameterMapping:
+        ? '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","hiring_stage_date"],{"base-type":"type/DateTime"}],{"stage-number":0}]'
+        : id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","hiring_stage_date"],{"base-type":"type/DateTime"}],{"stage-number":0}]'
+          source:
+            id: f7a22c81
+            name: Date
+            type: parameter
+          target:
+            dimension:
+            - dimension
+            - - field
+              - - Test Starrocks Dev
+                - null
+                - assign_job_candidate_1287967
+                - hiring_stage_date
+              - base-type: type/DateTime
+            - stage-number: 0
+            id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","hiring_stage_date"],{"base-type":"type/DateTime"}],{"stage-number":0}]'
+            type: dimension
+        ? '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","id"],{"base-type":"type/Integer"}],{"stage-number":0}]'
+        : id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","id"],{"base-type":"type/Integer"}],{"stage-number":0}]'
+          source:
+            id: f4520ff3
+            name: ID
+            type: parameter
+          target:
+            dimension:
+            - dimension
+            - - field
+              - - Test Starrocks Dev
+                - null
+                - assign_job_candidate_1287967
+                - id
+              - base-type: type/Integer
+            - stage-number: 0
+            id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","id"],{"base-type":"type/Integer"}],{"stage-number":0}]'
+            type: dimension
+        ? '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","job_owner_name"],{"base-type":"type/Text"}],{"stage-number":0}]'
+        : id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","job_owner_name"],{"base-type":"type/Text"}],{"stage-number":0}]'
+          source:
+            id: 4fbe5547
+            name: Recruiter
+            type: parameter
+          target:
+            dimension:
+            - dimension
+            - - field
+              - - Test Starrocks Dev
+                - null
+                - assign_job_candidate_1287967
+                - job_owner_name
+              - base-type: type/Text
+            - stage-number: 0
+            id: '["dimension",["field",["Test Starrocks Dev",null,"assign_job_candidate_1287967","job_owner_name"],{"base-type":"type/Text"}],{"stage-number":0}]'
+            type: dimension
+      targetId: gtYmSiklhALPI6mv7SwPK
+      type: link
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: X6jAcn_WKmxcqfU7C5c-n
+    model: DashboardCard
+- entity_id: 7ywY_wTjYIensXW18n5zY
+  card_id: 1fsXSFVeVHrmgohJoJ_4D
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 0
+  col: 12
+  size_x: 12
+  size_y: 4
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: 1fsXSFVeVHrmgohJoJ_4D
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - deals_1287967
+        - owner_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: 1fsXSFVeVHrmgohJoJ_4D
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - deals_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: 1fsXSFVeVHrmgohJoJ_4D
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - deals_1287967
+        - close_date
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    click_behavior:
+      linkType: dashboard
+      parameterMapping: {}
+      tabId:
+      - ftG8ZmS7jx0N-Jh7ao9lA
+      - WOLSSWdvcULnbMcou_hkk
+      targetId: ftG8ZmS7jx0N-Jh7ao9lA
+      type: link
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: 7ywY_wTjYIensXW18n5zY
+    model: DashboardCard
+- entity_id: McquUgDQ665KpOA7FwC1E
+  card_id: aFFwCldzuvG2T8WexWbM3
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 4
+  col: 0
+  size_x: 24
+  size_y: 10
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters:
+  - 3adeee63
+  parameter_mappings:
+  - card_id: aFFwCldzuvG2T8WexWbM3
+    parameter_id: 3adeee63
+    target:
+    - dimension
+    - - field
+      - total_jobs
+      - base-type: type/BigInteger
+    - stage-number: 0
+  - card_id: aFFwCldzuvG2T8WexWbM3
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - recruiter
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: aFFwCldzuvG2T8WexWbM3
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: McquUgDQ665KpOA7FwC1E
+    model: DashboardCard
+- entity_id: -G1kwCU22-nkSMYOEnbWV
+  card_id: W8pM-rPJTsCn0jWdQP3EM
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 14
+  col: 0
+  size_x: 24
+  size_y: 10
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: W8pM-rPJTsCn0jWdQP3EM
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - owner
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: W8pM-rPJTsCn0jWdQP3EM
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: W8pM-rPJTsCn0jWdQP3EM
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - created_on
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: -G1kwCU22-nkSMYOEnbWV
+    model: DashboardCard
+- entity_id: 21T9Au6tS_ogt-mDroKey
+  card_id: Qeg7CJ76ddFSkjqvV4y9F
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 24
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters:
+  - 37b46d6c
+  parameter_mappings:
+  - card_id: Qeg7CJ76ddFSkjqvV4y9F
+    parameter_id: 37b46d6c
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - created_on
+      - base-type: type/DateTime
+    - stage-number: 0
+  - card_id: Qeg7CJ76ddFSkjqvV4y9F
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - owner_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Qeg7CJ76ddFSkjqvV4y9F
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: Qeg7CJ76ddFSkjqvV4y9F
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - contacts_1287967
+        - created_on
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: 21T9Au6tS_ogt-mDroKey
+    model: DashboardCard
+- entity_id: PHcXlKu4WkbVWpk3ynIFF
+  card_id: Zwxyrk7IiSCjPoBDs_GXF
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 33
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: Zwxyrk7IiSCjPoBDs_GXF
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - call_logs_1287967
+        - call_from_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Zwxyrk7IiSCjPoBDs_GXF
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - call_logs_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: Zwxyrk7IiSCjPoBDs_GXF
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - call_logs_1287967
+        - created_on
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: PHcXlKu4WkbVWpk3ynIFF
+    model: DashboardCard
+- entity_id: 5BmItoPB39qEOQZkmikx-
+  card_id: vjnPbHqql2J_Nxmi_WiK7
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 42
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: vjnPbHqql2J_Nxmi_WiK7
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - jobs_1287967
+        - owner_name
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: vjnPbHqql2J_Nxmi_WiK7
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - jobs_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: vjnPbHqql2J_Nxmi_WiK7
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - assign_job_candidate_1287967
+        - hiring_stage_date
+      - base-type: type/DateTime
+        join-alias: Assign Job Candidate 1287967
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: 5BmItoPB39qEOQZkmikx-
+    model: DashboardCard
+- entity_id: CyqiK0QnxrolbrVhAGCIj
+  card_id: Jg3x-PXfCcNs3T__lF4Mj
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 51
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: Jg3x-PXfCcNs3T__lF4Mj
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - recruiter
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: Jg3x-PXfCcNs3T__lF4Mj
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - date
+      - base-type: type/Date
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: CyqiK0QnxrolbrVhAGCIj
+    model: DashboardCard
+- entity_id: 0ktEzy_vtPaJfRHwp5B5z
+  card_id: GH7St-t3DcBeI5kMexu58
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 60
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: GH7St-t3DcBeI5kMexu58
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - notes_1287967
+        - created_by
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: GH7St-t3DcBeI5kMexu58
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - notes_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: GH7St-t3DcBeI5kMexu58
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - notes_1287967
+        - note_created_at
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: 0ktEzy_vtPaJfRHwp5B5z
+    model: DashboardCard
+- entity_id: uhpMbinwWK8vWMVDZiIw3
+  card_id: jiqTQeACtU5yuMw_xgv8V
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 69
+  col: 0
+  size_x: 24
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - jxknAvwQYAxi9x2QTdigZ
+  inline_parameters: []
+  parameter_mappings:
+  - card_id: jiqTQeACtU5yuMw_xgv8V
+    parameter_id: 4fbe5547
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - owner
+      - base-type: type/Text
+    - stage-number: 0
+  - card_id: jiqTQeACtU5yuMw_xgv8V
+    parameter_id: f4520ff3
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - id
+      - base-type: type/Integer
+    - stage-number: 0
+  - card_id: jiqTQeACtU5yuMw_xgv8V
+    parameter_id: f7a22c81
+    target:
+    - dimension
+    - - field
+      - - Test Starrocks Dev
+        - null
+        - companies_1287967
+        - created_on
+      - base-type: type/DateTime
+    - stage-number: 0
+  series: []
+  visualization_settings:
+    click_behavior:
+      linkTemplate: https://analytics.recruitcrm.net
+      linkType: url
+      type: link
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+  - id: uhpMbinwWK8vWMVDZiIw3
+    model: DashboardCard
+- entity_id: dHM30700jjWrL5S4AR5Mj
+  card_id: gtYmSiklhALPI6mv7SwPK
+  created_at: '2026-06-17T14:52:55.446865Z'
+  row: 0
+  col: 0
+  size_x: 24
+  size_y: 10
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - WOLSSWdvcULnbMcou_hkk
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: WOLSSWdvcULnbMcou_hkk
+    model: DashboardTab
+  - id: dHM30700jjWrL5S4AR5Mj
+    model: DashboardCard
+- entity_id: gd0eik5oshnyCSaW5N4wI
+  card_id: f2RUAsXclDW8r7I7KVxTY
+  created_at: '2026-06-17T14:57:31.425639Z'
+  row: 10
+  col: 0
+  size_x: 12
+  size_y: 9
+  dashboard_tab_id:
+  - ftG8ZmS7jx0N-Jh7ao9lA
+  - WOLSSWdvcULnbMcou_hkk
+  inline_parameters: []
+  parameter_mappings: []
+  series: []
+  visualization_settings:
+    column_settings: null
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: WOLSSWdvcULnbMcou_hkk
+    model: DashboardTab
+  - id: gd0eik5oshnyCSaW5N4wI
+    model: DashboardCard
+tabs:
+- created_at: '2026-06-17T14:52:55.446865Z'
+  entity_id: jxknAvwQYAxi9x2QTdigZ
+  name: Tab 1
+  position: 0
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: jxknAvwQYAxi9x2QTdigZ
+    model: DashboardTab
+- created_at: '2026-06-17T14:52:55.446865Z'
+  entity_id: WOLSSWdvcULnbMcou_hkk
+  name: Tab 2
+  position: 1
+  serdes/meta:
+  - id: ftG8ZmS7jx0N-Jh7ao9lA
+    model: Dashboard
+  - id: WOLSSWdvcULnbMcou_hkk
+    model: DashboardTab
+width: fixed
