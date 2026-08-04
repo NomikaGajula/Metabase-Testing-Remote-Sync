@@ -18,52 +18,33 @@ result_metadata:
   database_type: MEDIUMTEXT
   display_name: recruiter
   effective_type: type/Text
-  field_ref:
-  - field
-  - recruiter
-  - base-type: type/Text
+  fk_target_field_id: null
   name: recruiter
-  semantic_type: null
 - base_type: type/Date
   database_type: DATE
   display_name: date
   effective_type: type/Date
-  field_ref:
-  - field
-  - date
-  - base-type: type/Date
+  fk_target_field_id: null
   name: date
-  semantic_type: null
 - base_type: type/Text
   database_type: MEDIUMTEXT
   display_name: placement_type
   effective_type: type/Text
-  field_ref:
-  - field
-  - placement_type
-  - base-type: type/Text
+  fk_target_field_id: null
   name: placement_type
   semantic_type: type/Category
 - base_type: type/BigInteger
   database_type: BIGINT
   display_name: total_deals
   effective_type: type/BigInteger
-  field_ref:
-  - field
-  - total_deals
-  - base-type: type/BigInteger
+  fk_target_field_id: null
   name: total_deals
-  semantic_type: null
 - base_type: type/BigInteger
   database_type: BIGINT
   display_name: total_jobs
   effective_type: type/BigInteger
-  field_ref:
-  - field
-  - total_jobs
-  - base-type: type/BigInteger
+  fk_target_field_id: null
   name: total_jobs
-  semantic_type: null
 visualization_settings:
   column_settings: null
   table.cell_column: total_deals

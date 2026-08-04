@@ -138,9 +138,9 @@ dashcards:
     model: Dashboard
   - id: nir34r9hPwf7sTg1asaDJ
     model: DashboardCard
-- entity_id: Ago46htiOjUJ_VFtdTr0J
+- entity_id: oYnrYaw28rvO77iEWVr-U
   card_id: y1gwWclAAeEJQ55f5nAFG
-  created_at: '2026-06-30T09:41:08.503974Z'
+  created_at: '2026-08-04T15:42:55.332769Z'
   row: 4
   col: 0
   size_x: 24
@@ -165,7 +165,7 @@ dashcards:
   serdes/meta:
   - id: sihCH-JgPgSA8wjMsz-XC
     model: Dashboard
-  - id: Ago46htiOjUJ_VFtdTr0J
+  - id: oYnrYaw28rvO77iEWVr-U
     model: DashboardCard
 tabs: []
 width: fixed
